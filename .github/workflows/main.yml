@@ -30,6 +30,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Authenticates
         run: |
+          sfdx --version
           mkdir -p /tmp/keys
           chmod +x -R /tmp/keys
           echo ${{ secrets.DEVHUB_SERVER_KEY }} >/tmp/keys/server64.key
