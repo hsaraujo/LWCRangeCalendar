@@ -31,7 +31,7 @@ jobs:
       - name: Authenticates
         run: |
           mkdir -p /tmp/keys
-          chmod +x -r /tmp/keys
+          chmod +x -R /tmp/keys
           echo ${{ secrets.DEVHUB_SERVER_KEY }} >/tmp/keys/server64.key
           base64 -d /tmp/keys/server64.key >/tmp/keys/server.key
           cat /tmp/keys/server.key
